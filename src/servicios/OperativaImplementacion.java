@@ -5,7 +5,6 @@ package servicios;
 
 import java.io.IOException;
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.Scanner;
 
@@ -24,11 +23,8 @@ public class OperativaImplementacion implements OperativaIntefaz {
 
 	@Override
 	public void CalculoDiario() throws IOException {
-		
-		System.out.println("Ingrese fecha (dd-MM-yyyy)");
-		String fecha = sc.next();
-		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");	
-		LocalDate fechaFormateada = LocalDate.parse(fecha,formatter);
+	
+		LocalDate fechaFormateada = util.SolicitarFecha();
 		
 		double banca = 0.0;
 		
@@ -50,7 +46,7 @@ public class OperativaImplementacion implements OperativaIntefaz {
 	    
 	    // Mostrar resultados
 	    System.out.println("Diferencia entre la primera y la última compra: " + diferenciaDias + " días");
-	    System.out.println("Total del día: " + banca + "$");
+	    System.out.println("Total del día: " + banca + "euros");
 	    System.out.println("Fecha: " + fechaFormateada);
 
 	}

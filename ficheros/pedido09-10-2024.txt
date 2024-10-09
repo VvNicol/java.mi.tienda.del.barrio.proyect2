@@ -1,0 +1,4 @@
+Pedido número: 2
+Cantidad: 60
+Fecha del pedido: 11-10-2024
+

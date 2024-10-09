@@ -3,6 +3,11 @@
  */
 package util;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
+import java.util.Scanner;
+
 import controlador.Inicio;
 
 /**
@@ -11,6 +16,7 @@ import controlador.Inicio;
  * @author nrojlla 081024
  */
 public class util {
+	static Scanner sc = new Scanner(System.in);
 
 	/**
 	 * Calcula el id auto del ventas
@@ -41,13 +47,32 @@ public class util {
 
 		if (tamanioLista > 0) {
 
-			nuevoId = Inicio.PedidoLista.get(tamanioLista - 1).getIdPedido()+ 1;
+			nuevoId = Inicio.PedidoLista.get(tamanioLista - 1).getIdPedido() + 1;
 
 		} else {
 			nuevoId = 1;
 		}
 
 		return nuevoId;
+	}
+
+	public static LocalDate SolicitarFecha() {
+
+		LocalDate fechaDate = null;
+		boolean esValido = false;
+		do {
+			try {
+				System.out.println("Ingrese fecha (dd-mm-yyyy):");
+				String fecha = sc.nextLine();
+
+				DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+				fechaDate = LocalDate.parse(fecha, formato);
+				esValido = true;
+			} catch (DateTimeParseException e) {
+				System.out.println("Formato de fecha inválido. Intente de nuevo.");
+			}
+		} while (!esValido);
+		return fechaDate;
 	}
 
 }

@@ -21,10 +21,10 @@ public class GerenciaImplementacion implements GerenciaInterfaz {
 
 	@Override
 	public void MostrarVentasDia() throws IOException {
-		System.out.println("Ingrese fecha (dd-MM-yyyy)");
-		String fecha = sc.next();
+		
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
-		LocalDate fechaFormateada = LocalDate.parse(fecha, formatter);
+		
+		LocalDate fechaFormateada = util.SolicitarFecha();
 
 		for (VentaDto v : Inicio.VentaLista) {
 

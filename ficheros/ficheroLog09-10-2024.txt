@@ -1,0 +1,48 @@
+Menu principal
+ Cerrar menu 
+Menu principal
+Menu empleado
+agregar venta
+Calcular diario
+volver
+Menu principal
+Menu gerencia
+Mostrar ventas
+Crear pedido
+Error: Text '0' could not be parsed at index 0
+Menu principal
+Menu principal
+Menu gerencia
+Crear pedido
+Imprimir pedido
+Menu principal
+Menu gerencia
+Mostrar ventas
+Crear pedido
+Menu principal
+Menu empleado
+agregar venta
+volver
+Menu principal
+Menu gerencia
+Mostrar ventas
+Crear pedido
+Imprimir pedido
+Imprimir pedido
+Volver
+Menu principal
+Menu principal
+Menu empleado
+agregar venta
+agregar venta
+Calcular diario
+volver
+Menu principal
+Menu gerencia
+Mostrar ventas
+Crear pedido
+Imprimir pedido
+Imprimir pedido
+Volver
+Menu principal
+ Cerrar menu 
